@@ -1,0 +1,107 @@
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1614926399.6512077,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-xueyuanzang-express-hello-maste-fgtmn-bq28j[0m
+{"level":"info","ts":1614926436.9445066,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/***********/express-hello.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1614926436.9445786,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1614926436.9800954,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:fad50b1e4feeaaa10b789535fa825b95e80aa561
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.434s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0305 06:40:43.660644      11 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0305 06:40:44.504167      11 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0305 06:40:44.506809      11 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Built cross stage deps: map[]                
+[36mINFO[0m[0006] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0007] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0009] Executing 0 build triggers                   
+[36mINFO[0m[0009] cmd: EXPOSE                                  
+[36mINFO[0m[0009] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0009] Checking for cached layer gcr.io/ivory-nectar-300702/cache:2af5efc2e17c5a66d8fe6d7d136ae7655510829d40ad7314528fb2ca222204c2... 
+[36mINFO[0m[0010] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0010] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0015] ENV PORT 8080                                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] EXPOSE 8080                                  
+[36mINFO[0m[0015] cmd: EXPOSE                                  
+[36mINFO[0m[0015] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] WORKDIR /usr/src/app                         
+[36mINFO[0m[0015] cmd: workdir                                 
+[36mINFO[0m[0015] Changed working directory to /usr/src/app    
+[36mINFO[0m[0015] Creating directory /usr/src/app              
+[36mINFO[0m[0015] Resolving 1 paths                            
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] COPY . .                                     
+[36mINFO[0m[0016] Resolving 509 paths                          
+[36mINFO[0m[0016] Taking snapshot of files...                  
+[36mINFO[0m[0016] CMD ["npm", "start"]                         
+[36mINFO[0m[0016] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0016] Pushing layer gcr.io/ivory-nectar-300702/cache:2af5efc2e17c5a66d8fe6d7d136ae7655510829d40ad7314528fb2ca222204c2 to cache now 
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/express-hello to an unshallow repository
+Generating change log from git ref 3e5ee0ef9f2fcf2085d5fc8f9c9bba0c0427fc4d => a97efa79bb415619849fd1fb2ccb5d41acf22f6e
+Finding issues in commit messages using git format
+WARNING: No release found for ***********/express-hello and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/***********/express-hello/releases/tag/v0.0.2
+generated: /workspace/source/charts/express-hello/templates/release.yaml
+Created Release express-hello-0-0-2 resource in namespace **
+Updating PipelineActivity ***********-express-hello-master-2 with version 0.0.2
+Updated PipelineActivities ***********-express-hello-master-2 with release notes URL: https://github.com/***********/express-hello/releases/tag/v0.0.2
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file express-hello-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mxueyuanzang-express-hello-maste-fgtmn-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app express-hello version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/***********/environment-jenkins-x-staging/pull/2
+Added label updatebot to Pull Request https://github.com/***********/environment-jenkins-x-staging/pull/2
+got git provider status pending from PR https://github.com/***********/environment-jenkins-x-staging/pull/2
+Pull Request https://github.com/***********/environment-jenkins-x-staging/pull/2 is merged at sha 202fbdc00bcdfc65c91331397d0ddbb3c662aa36
+Pull Request merged but we are not waiting for the update pipeline to complete!
